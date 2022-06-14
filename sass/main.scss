@@ -1,0 +1,19 @@
+@import
+    "./utils/variables",
+    "./utils/functions",
+    "./utils/mixins";
+// @import
+//     "./vendors/normalize";
+// -> rend le style.css illisible
+@import 
+    "./base/base",
+    "./base/typography";
+@import 
+    "./components/buttons";
+@import 
+    "./layouts/navigation";
+@import 
+    "./pages/french",
+    "./pages/delice_sens",
+    "./pages/palette_gout",
+    "./pages/note_enchantee";
