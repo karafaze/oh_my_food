@@ -1,8 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
-
-$color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-ternary: #99E2D0;
-
-$font-title: 'Shrikhand', cursive;
-$font-body: 'Roboto', sans-serif;
+@import
+    "./utils/variables",
+    "./utils/functions",
+    "./utils/mixins";
+// @import
+//     "./vendors/normalize";
+// -> rend le style.css illisible
+@import 
+    "./base/base",
+    "./base/typography";
+@import 
+    "./components/buttons";
+@import 
+    "./layouts/navigation";
+@import 
+    "./pages/french",
+    "./pages/delice_sens",
+    "./pages/palette_gout",
+    "./pages/note_enchantee";
