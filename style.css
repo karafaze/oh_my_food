@@ -103,10 +103,11 @@ h2 {
 .howto {
   display: flex;
   flex-direction: column;
-  padding: 4rem 2rem 1.5rem 0.5rem;
+  padding: 4rem 2rem 5rem 0.5rem;
 }
 .howto h2 {
   padding-left: 1rem;
+  font-size: 1.9rem;
 }
 
 .item {
@@ -138,16 +139,17 @@ h2 {
   background-color: #f2f2f2;
   border-radius: 25px;
   box-shadow: 2px 4px 15px #AEAEAE;
-  padding: 2.3rem 0;
+  padding: 2.5rem 0;
 }
 .item__content i {
-  font-size: 1.7rem;
-  padding: 0 2.5rem;
+  font-size: 1.6rem;
+  padding: 0 2rem 0 3rem;
   color: hsl(267.3134328358deg, 0%, 50%);
 }
 .item__content p {
   width: 80%;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  font-weight: 500;
 }
 .item__content:hover {
   background-color: #f2eafb;
