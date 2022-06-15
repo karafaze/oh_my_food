@@ -1,0 +1,55 @@
+.howto{
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 2rem 1.5rem .5rem;
+    & h2{
+        padding-left: 1rem;
+    }
+}
+
+.item{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    &__container{
+        width: 100%;
+        margin-top: 2.2em;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+    &__number{
+        background-color: $color-primary;
+        color: #fff;
+        padding: .25rem .6rem;
+        font-size: 1.2rem;
+        border-radius: 50%;
+        position: relative;
+        left: 1rem;
+    }
+    &__content{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        background-color: lighten($color-background, 3%);
+        border-radius: 25px;
+        box-shadow: 2px 4px 15px #AEAEAE;
+        padding: 2.3rem 0;
+        & i{
+            font-size: 1.7rem;
+            padding: 0 2.5rem;
+            color: hsl(hue($color-primary), 0%, 50%);
+        }
+        & p{
+            width: 80%;
+            font-size: 1.4rem;
+        }
+        &:hover{
+            background-color: lighten($color-primary, 35%);
+            & i{
+                color: $color-primary;
+            }
+        }
+    }
+}
