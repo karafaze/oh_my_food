@@ -8,6 +8,10 @@ footer{
     & h3{
         font-family: $font-title;
         font-size: 1.5rem;
+        @include tablet{
+            text-align: center;
+            font-size: 2rem;
+        }
     }
 }
 
@@ -15,9 +19,17 @@ footer{
     display: flex;
     flex-direction: column;
     gap: .7em;
+    @include tablet{
+        flex-direction: row;
+        justify-content: center;
+        gap: 3em;
+    }
     & a{
         text-decoration: none;
         color: #fff;
+        &:hover{
+            text-decoration: underline;
+        }
     }
     &__item{
         display: flex;

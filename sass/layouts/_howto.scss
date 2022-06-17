@@ -1,23 +1,38 @@
+// *{
+//     border: 1px solid red;
+// }
+
 .howto{
     display: flex;
     flex-direction: column;
     padding: 4rem 2rem 5rem .5rem;
+    @include tablet{
+        padding: 3rem 2rem 4rem .5rem;
+    }
     & h2{
         padding-left: 1rem;
         font-size: 1.9rem;
+    }
+    &__container{
+        margin-top: 2.2em;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        @include tablet{
+            flex-direction: row;
+            gap: .5em;
+            justify-content: space-between;
+        }
     }
 }
 
 .item{
     display: flex;
     align-items: center;
-    width: 100%;
-    &__container{
-        width: 100%;
-        margin-top: 2.2em;
-        display: flex;
-        flex-direction: column;
-        gap: 2em;
+    @include tablet{
+        flex-basis: 33%;
+        justify-content: center;
+        max-width: 400px;
     }
     &__number{
         background-color: $color-primary;
@@ -37,17 +52,28 @@
         border-radius: 25px;
         box-shadow: 2px 4px 15px #AEAEAE;
         padding: 2.3rem 0;
+        @include tablet{
+            padding: 1rem;
+        }
         & i{
             font-size: 1.6rem;
             padding: 0 2rem 0 3rem;
             color: hsl(hue($color-primary), 0%, 50%);
+            @include tablet{
+                padding: 1rem;
+                font-size: 1.5rem;
+            }
         }
         & p{
             width: 80%;
             font-size: 1.3rem;
             font-weight: 500;
+            @include tablet{
+                font-size: 1.2rem;
+            }
         }
         &:hover{
+            cursor: pointer;
             background-color: lighten($color-primary, 35%);
             & i{
                 color: $color-primary;

@@ -4,23 +4,38 @@
     gap: 1.8em;
     background-color: lighten($color-background, 3%);
     padding: 4.5rem 1.5rem 5.2rem 1.5rem;
+    @include tablet{
+        padding: 3.5rem 1rem 4.2rem 1rem;
+    }
+    & h2{
+        @include tablet{
+            padding-left: 1rem;
+        }
+    }
     &__container{
         display: flex;
         flex-direction: column;
         gap: 1.5em;
+        @include tablet{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
     }
 }
 
 .card{
     text-decoration: none;
     color: #000;
-    width: 100%;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
     box-shadow: 2px 4px 10px #AEAEAE;
+    @include tablet{
+        flex-basis: 47%;
+    }
     &__new {
         border-radius: 2px;
         font-weight: 500;
@@ -79,32 +94,5 @@
         &:hover i[class*="regular"]{
             opacity: 0;
         }
-        // & i[class*="regular"]{
-        //     position: relative;
-        //     z-index: 100;
-        // }
-        // & i[class*="solid"]{
-        //     position: absolute;
-        //     z-index: 1;
-        //     opacity: 0;
-        // }
-        // &:hover i[class*="solid"]{
-        //     z-index: 1000;
-        //     color: transparent;
-        //     position: relative;
-        //     background-clip: text;
-        //     -webkit-background-clip: text;
-        //     background-image: linear-gradient(to bottom right, $color-secondary, $color-primary);
-        //     opacity: 1;
-        // }
     }
 }
-
-// @keyframes color-filler {
-//     0%{
-//         color: $color-secondary;
-//     }
-//     100%{
-//         color: $color-primary;
-//     }
-// }
