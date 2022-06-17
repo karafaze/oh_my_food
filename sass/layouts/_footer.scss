@@ -1,0 +1,36 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3em;
+    padding: 2.1rem 2rem 2.7rem 2rem;
+    background-color: $color-footer;
+    color: #fff;
+    & h3{
+        font-family: $font-title;
+        font-size: 1.5rem;
+    }
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    gap: .7em;
+    & a{
+        text-decoration: none;
+        color: #fff;
+    }
+    &__item{
+        display: flex;
+        color: #fff;
+        & i{
+            font-size: 1.2rem;
+            padding-right: 1rem;
+        }
+        & i[class*="handshake"]{
+            padding-right: .5rem;
+        }
+    }
+    &__link{
+        font-size: 1.3rem;
+    }
+}
