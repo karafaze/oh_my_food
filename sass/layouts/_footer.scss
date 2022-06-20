@@ -2,12 +2,12 @@ footer{
     display: flex;
     flex-direction: column;
     gap: 1.3em;
-    padding: 2.1rem 2rem 2.7rem 2rem;
+    padding: 1.5rem 2rem 2rem 2rem;
     background-color: $color-footer;
     color: #fff;
     & h3{
         font-family: $font-title;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         @include tablet{
             text-align: center;
             font-size: 2rem;
@@ -35,7 +35,7 @@ footer{
         display: flex;
         color: #fff;
         & i{
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             padding-right: 1rem;
         }
         & i[class*="handshake"]{
@@ -43,6 +43,6 @@ footer{
         }
     }
     &__link{
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 }
