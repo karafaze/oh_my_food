@@ -60,7 +60,11 @@ header{
         }
     }
     & i{
+        margin-right: 2rem;
         font-size: 2rem;
+        @include desktop{
+            margin-right: 0;
+        }
     }
 }
 
@@ -113,7 +117,7 @@ header{
         cursor: pointer;
         transform-origin: top;
         animation: listing 1s both;
-        @for $i from 1 through 9{
+        @for $i from 1 through 10{
             &--#{$i}{
                 animation-delay: 200ms * $i;
             }
