@@ -25,7 +25,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
 }
 
 .btn {
@@ -44,6 +44,58 @@ h3 {
   box-shadow: 6px 8px 15px #AEAEAE;
 }
 
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding-bottom: 6rem;
+}
+@media screen and (min-width: 992px) {
+  .btn-container {
+    padding-bottom: 3.5rem;
+  }
+}
+
+.btn__order {
+  margin: 1rem auto 1rem;
+  width: 50%;
+  padding: 1.1rem 0;
+  font-size: 1.4rem;
+}
+@media screen and (min-width: 992px) {
+  .btn__order {
+    width: 30%;
+  }
+}
+
+.title-container__icon, .card__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+.title-container__icon i[class*=regular], .card__icon i[class*=regular] {
+  position: relative;
+}
+.title-container__icon i[class*=solid], .card__icon i[class*=solid] {
+  color: transparent;
+  position: absolute;
+  opacity: 0;
+  transition: all 800ms linear;
+  clip-path: inset(100% 0% 0% 0%);
+}
+.title-container__icon:hover i[class*=solid], .card__icon:hover i[class*=solid] {
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  opacity: 1;
+  clip-path: inset(0% 0% 0% 0%);
+}
+.title-container__icon:hover i[class*=regular], .card__icon:hover i[class*=regular] {
+  opacity: 0;
+}
+
 @keyframes listing {
   0% {
     transform: translateY(10px);
@@ -54,6 +106,11 @@ h3 {
     transform: translateY(0px);
   }
 }
+header {
+  display: flex;
+  flex-direction: column;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -96,6 +153,41 @@ h3 {
   padding-right: 1rem;
 }
 
+.menu-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.7rem 0 1rem 0;
+}
+.menu-header__icon {
+  cursor: pointer;
+  position: absolute;
+  left: 1em;
+  font-size: 1.6rem;
+}
+@media screen and (min-width: 992px) {
+  .menu-header__icon {
+    font-size: 2rem;
+  }
+}
+.menu-header__icon a {
+  text-decoration: none;
+  color: #000;
+}
+.menu-header__logo {
+  width: 45%;
+}
+@media screen and (min-width: 992px) {
+  .menu-header__logo {
+    width: 25%;
+  }
+}
+.menu-header__image {
+  margin-bottom: -3.5rem;
+  object-fit: cover;
+  height: 350px;
+}
+
 .topbanner {
   width: 100%;
   background-image: linear-gradient(to top, #f7f7f7, white);
@@ -103,10 +195,10 @@ h3 {
 .topbanner__container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 1.1em;
   text-align: center;
-  justify-content: center;
   padding: 3rem 0;
 }
 .topbanner__container h2 {
@@ -130,7 +222,6 @@ h3 {
 }
 .howto h2 {
   padding-left: 1rem;
-  font-size: 2rem;
 }
 .howto__container {
   margin-top: 2.2em;
@@ -290,76 +381,9 @@ h3 {
   font-size: 1.4rem;
   font-weight: 300;
 }
-.card__icon {
-  font-size: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #000;
-}
-.card__icon i[class*=regular] {
-  position: relative;
-}
-.card__icon i[class*=solid] {
-  color: transparent;
-  position: absolute;
-  opacity: 0;
-  transition: all 800ms linear;
-  clip-path: inset(100% 0% 0% 0%);
-}
-.card__icon:hover i[class*=solid] {
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  opacity: 1;
-  clip-path: inset(0% 0% 0% 0%);
-}
-.card__icon:hover i[class*=regular] {
-  opacity: 0;
-}
 
 * {
   box-sizing: border-box;
-}
-
-header {
-  display: flex;
-  flex-direction: column;
-}
-
-.menu-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.7rem 0 1rem 0;
-}
-.menu-header__icon {
-  cursor: pointer;
-  position: absolute;
-  left: 1em;
-  font-size: 1.6rem;
-}
-@media screen and (min-width: 992px) {
-  .menu-header__icon {
-    font-size: 2rem;
-  }
-}
-.menu-header__icon a {
-  text-decoration: none;
-  color: #000;
-}
-.menu-header__logo {
-  width: 45%;
-}
-@media screen and (min-width: 992px) {
-  .menu-header__logo {
-    width: 25%;
-  }
-}
-.menu-header__image {
-  margin-bottom: -3.5rem;
-  object-fit: cover;
-  height: 350px;
 }
 
 .title-container {
@@ -388,36 +412,12 @@ header {
   }
 }
 .title-container__icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-right: 2rem;
-  font-size: 2rem;
 }
 @media screen and (min-width: 992px) {
   .title-container__icon {
     margin-right: 0;
   }
-}
-.title-container__icon i[class*=regular] {
-  position: relative;
-}
-.title-container__icon i[class*=solid] {
-  color: transparent;
-  position: absolute;
-  opacity: 0;
-  transition: all 800ms linear;
-  clip-path: inset(100% 0% 0% 0%);
-}
-.title-container__icon:hover i[class*=solid] {
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
-  opacity: 1;
-  clip-path: inset(0% 0% 0% 0%);
-}
-.title-container__icon:hover i[class*=regular] {
-  opacity: 0;
 }
 
 .menucard {
@@ -526,16 +526,6 @@ header {
 .menu__content:hover + .menu__validation i {
   transform: rotate(360deg);
 }
-.menu__validation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0 20px 20px 0;
-  background-color: #99E2D0;
-  width: 15%;
-  margin-right: -15%;
-  transition: margin 1s;
-}
 .menu__item {
   font-size: 1.4rem;
   white-space: nowrap;
@@ -578,7 +568,17 @@ header {
   }
 }
 
-.iconwrapper i {
+.menu__validation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 20px 20px 0;
+  background-color: #99E2D0;
+  width: 15%;
+  margin-right: -15%;
+  transition: margin 1s;
+}
+.menu__validation .iconwrapper i {
   font-weight: bolder;
   font-size: 1.2rem;
   background-color: #fff;
@@ -589,33 +589,8 @@ header {
   transition-duration: 1s;
 }
 @media screen and (min-width: 992px) {
-  .iconwrapper i {
+  .menu__validation .iconwrapper i {
     font-size: 1.5rem;
-  }
-}
-
-.btn-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f2f2f2;
-  padding-bottom: 6rem;
-}
-@media screen and (min-width: 992px) {
-  .btn-container {
-    padding-bottom: 3.5rem;
-  }
-}
-
-.btn__order {
-  margin: 1rem auto 1rem;
-  width: 50%;
-  padding: 1.1rem 0;
-  font-size: 1.4rem;
-}
-@media screen and (min-width: 992px) {
-  .btn__order {
-    width: 30%;
   }
 }
 
@@ -629,7 +604,6 @@ footer {
 }
 footer h3 {
   font-family: "Shrikhand", cursive;
-  font-size: 1.5rem;
 }
 @media screen and (min-width: 768px) {
   footer h3 {

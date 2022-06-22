@@ -3,43 +3,6 @@
     // border: 1px solid red;
 }
 
-header{
-    display: flex;
-    flex-direction: column;
-}
-
-.menu-header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.7rem 0 1rem 0;
-    &__icon{
-        cursor: pointer;
-        position: absolute;
-        left: 1em;
-        font-size: 1.6rem;
-        @include desktop{
-            font-size: 2rem;
-        }
-        & a{
-            text-decoration: none;
-            color: #000;
-        }
-    }
-    &__logo{
-        width: 45%;
-        @include desktop{
-            width: 25%;
-        }
-    }
-    &__image{
-        margin-bottom: -3.5rem;
-        object-fit: cover;
-        // object-position: top top;
-        height: 350px;
-    }
-}
-
 .title-container{
     display: flex;
     justify-content: space-between;
@@ -61,40 +24,15 @@ header{
         }
     }
     &__icon{
-        display: flex;
-        justify-content: center;
-        align-items: center;
         margin-right: 2rem;
-        font-size: 2rem;
         @include desktop{
             margin-right: 0;
-        }
-        & i[class*="regular"]{
-            position: relative;
-        }
-        & i[class*="solid"]{
-            color: transparent;
-            position: absolute;
-            opacity: 0;
-            transition: all 800ms linear;
-            clip-path: inset(100% 0% 0% 0%);
-        }
-        &:hover i[class*="solid"]{
-            background-clip: text;
-            -webkit-background-clip: text;
-            background-image: linear-gradient(to bottom right, $color-secondary, $color-primary);
-            opacity: 1;
-            clip-path: inset(0% 0% 0% 0%);
-        }
-        &:hover i[class*="regular"]{
-            opacity: 0;
         }
     }
 }
 
 .menucard{
-    display: flex;
-    flex-direction: column;
+    @include column-content;
     background-color: lighten($color-background, 3);
     padding: 2rem 1rem 2.7rem 1.2rem;
     gap: 2.5em;
@@ -105,8 +43,7 @@ header{
 }
 
 .menu{
-    display: flex;
-    flex-direction: column;
+    @include column-content;
     gap: 1.2em;
     margin-bottom: .8em;
     @include desktop{
@@ -150,8 +87,7 @@ header{
     }
     &__content{
         width: 100%;
-        display: flex;
-        flex-direction: column;
+        @include column-content;
         padding: 1rem;
         gap: .5em;
         transition: width 1s;
@@ -165,22 +101,9 @@ header{
             }
         }
     }
-    &__validation{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 0 20px 20px 0;
-        background-color: $color-ternary;
-        width: 15%;
-        margin-right: -15%;
-        transition: margin 1s;
-        }
     &__item{
         font-size: 1.4rem;
-        white-space: nowrap;
-        overflow: hidden;
-        display: inline-block;
-        text-overflow: ellipsis;
+        @include hide-content;
         @include desktop{
             font-size: 1.1rem;
         }
@@ -192,10 +115,7 @@ header{
         & p{
             font-weight: 100;
             font-size: 1.3rem;
-            white-space: nowrap;
-            overflow: hidden;
-            display: inline-block;
-            text-overflow: ellipsis;
+            @include hide-content;
             @include desktop{
                 font-size: 1rem;
             }
@@ -212,38 +132,26 @@ header{
     }
 }
 
-.iconwrapper{
-    & i{
-        font-weight: bolder;
-        font-size: 1.2rem;
-        background-color: #fff;
-        color: $color-ternary;
-        border-radius: 50%;
-        padding: .2rem .35rem;
-        transform: rotate(0deg);
-        transition-duration: 1s;
-        @include desktop{
-            font-size: 1.5rem;
+.menu__validation{
+    @include central-row-content;
+    border-radius: 0 20px 20px 0;
+    background-color: $color-ternary;
+    width: 15%;
+    margin-right: -15%;
+    transition: margin 1s;
+    & .iconwrapper{
+        & i{
+            font-weight: bolder;
+            font-size: 1.2rem;
+            background-color: #fff;
+            color: $color-ternary;
+            border-radius: 50%;
+            padding: .2rem .35rem;
+            transform: rotate(0deg);
+            transition-duration: 1s;
+            @include desktop{
+                font-size: 1.5rem;
+            }
         }
-    }
-}
-.btn-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: lighten($color-background, 3);
-    padding-bottom: 6rem;
-    @include desktop{
-        padding-bottom: 3.5rem;
-    }
-}
-
-.btn__order{
-    margin: 1rem auto 1rem;
-    width: 50%;
-    padding: 1.1rem 0;
-    font-size: 1.4rem;
-    @include desktop{
-        width: 30%;
     }
 }

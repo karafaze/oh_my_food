@@ -13,3 +13,24 @@
         box-shadow: 6px 8px 15px #AEAEAE;
     }
 }
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lighten($color-background, 3);
+    padding-bottom: 6rem;
+    @include desktop{
+        padding-bottom: 3.5rem;
+    }
+}
+
+.btn__order{
+    margin: 1rem auto 1rem;
+    width: 50%;
+    padding: 1.1rem 0;
+    font-size: 1.4rem;
+    @include desktop{
+        width: 30%;
+    }
+}

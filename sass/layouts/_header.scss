@@ -1,6 +1,9 @@
+header{
+    @include column-content;
+}
+
 .header{
-    display: flex;
-    flex-direction: column;
+    @include column-content;
     align-items: center;
     gap: 1em;
     @include desktop{
@@ -31,5 +34,36 @@
         & i{
             padding-right: 1rem;
         }
+    }
+}
+
+
+
+.menu-header{
+   @include central-row-content;
+    padding: 1.7rem 0 1rem 0;
+    &__icon{
+        cursor: pointer;
+        position: absolute;
+        left: 1em;
+        font-size: 1.6rem;
+        @include desktop{
+            font-size: 2rem;
+        }
+        & a{
+            text-decoration: none;
+            color: #000;
+        }
+    }
+    &__logo{
+        width: 45%;
+        @include desktop{
+            width: 25%;
+        }
+    }
+    &__image{
+        margin-bottom: -3.5rem;
+        object-fit: cover;
+        height: 350px;
     }
 }

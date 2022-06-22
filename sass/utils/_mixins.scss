@@ -9,3 +9,28 @@
         @content
     }
 };
+
+@mixin column-content{
+    display: flex;
+    flex-direction: column;
+};
+
+@mixin central-column-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin central-row-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin hide-content{
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+}

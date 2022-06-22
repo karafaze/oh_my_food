@@ -2,12 +2,9 @@
     width: 100%;
     background-image: linear-gradient(to top, lighten($color-background, 5%), lighten($color-background, 10%));
     &__container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include central-column-content;
         gap: 1.1em;
         text-align: center;
-        justify-content: center;
         padding: 3rem 0;
         & h2{
             width: 65%;
