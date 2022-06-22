@@ -39,6 +39,10 @@ h3 {
   box-shadow: 3px 5px 10px #AEAEAE;
   cursor: pointer;
 }
+.btn:hover {
+  background-image: linear-gradient(to bottom right, #ff88de, #9b63df);
+  box-shadow: 6px 8px 15px #AEAEAE;
+}
 
 @keyframes listing {
   0% {
