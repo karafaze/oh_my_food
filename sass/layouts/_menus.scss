@@ -33,8 +33,9 @@ header{
         }
     }
     &__image{
-        margin-bottom: -5.5rem;
+        margin-bottom: -3.5rem;
         object-fit: cover;
+        // object-position: top top;
         height: 350px;
     }
 }
@@ -43,8 +44,8 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2.5rem 1rem .2rem 1rem;
-    background-color: $color-background;
+    padding: 2.6rem 1rem .4rem 1.5rem;
+    background-color: lighten($color-background, 3);
     border-radius: 45px 45px 0 0;
     position: relative;
     z-index: 1;
@@ -54,7 +55,7 @@ header{
         padding: 2.5rem 1rem .6rem 1rem;;
     }
     & > h1{
-        font-size: 2rem;
+        font-size: 2.3rem;
         @include desktop{
             font-size: 1.8rem;
         }
@@ -71,8 +72,8 @@ header{
 .menucard{
     display: flex;
     flex-direction: column;
-    background-color: $color-background;
-    padding: 2rem 1rem;
+    background-color: lighten($color-background, 3);
+    padding: 2rem 1rem 2.7rem 1.2rem;
     gap: 2.5em;
     @include desktop{
         flex-direction: row;
@@ -83,13 +84,13 @@ header{
 .menu{
     display: flex;
     flex-direction: column;
-    gap: .9em;
+    gap: 1.2em;
     margin-bottom: .8em;
     @include desktop{
         width: calc(100% / 3);
     }
     &__title{
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         text-transform: uppercase;
         font-weight: 100;
         padding-bottom: .3rem;
@@ -100,11 +101,11 @@ header{
             content: '';
             display: block;
             background-color: #99E2D0;
-            width: 45px;
+            width: 50px;
             height: 4px;
-            margin: .3rem 0 .1rem 0;
+            margin-top: .4rem;
             @include desktop{
-                margin-top: .2rem;
+                margin-top: .1rem;
             }
         }
     }
@@ -129,7 +130,7 @@ header{
         display: flex;
         flex-direction: column;
         padding: 1rem;
-        gap: .2em;
+        gap: .5em;
         transition: width 1s;
         &:hover{
             width: 85%;
@@ -152,7 +153,7 @@ header{
         transition: margin 1s;
         }
     &__item{
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         white-space: nowrap;
         overflow: hidden;
         display: inline-block;
@@ -167,7 +168,7 @@ header{
         align-items: center;
         & p{
             font-weight: 100;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             white-space: nowrap;
             overflow: hidden;
             display: inline-block;
@@ -180,6 +181,7 @@ header{
             font-size: 1.2rem;
             font-weight: 500;
             margin-right: .7em;
+            padding-left: .5rem;
             @include desktop{
                 font-size: .9rem;
             }
@@ -206,15 +208,18 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $color-background;
-    padding-bottom: 4rem;
+    background-color: lighten($color-background, 3);
+    padding-bottom: 6rem;
+    @include desktop{
+        padding-bottom: 3.5rem;
+    }
 }
 
 .btn__order{
     margin: 1rem auto 1rem;
     width: 50%;
     padding: 1.1rem 0;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     @include desktop{
         width: 30%;
     }

@@ -83,6 +83,7 @@
         & i[class*="solid"]{
             position: absolute;
             opacity: 0;
+            // transition: opacity 2s ease-in-out;
         }
         &:hover i[class*="solid"]{
             color: transparent;
