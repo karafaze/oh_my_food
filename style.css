@@ -297,15 +297,18 @@ h3 {
   position: relative;
 }
 .card__icon i[class*=solid] {
+  color: transparent;
   position: absolute;
   opacity: 0;
+  transition: all 800ms linear;
+  clip-path: inset(100% 0% 0% 0%);
 }
 .card__icon:hover i[class*=solid] {
-  color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   opacity: 1;
+  clip-path: inset(0% 0% 0% 0%);
 }
 .card__icon:hover i[class*=regular] {
   opacity: 0;
@@ -380,14 +383,37 @@ header {
     font-size: 1.8rem;
   }
 }
-.title-container i {
+.title-container__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-right: 2rem;
   font-size: 2rem;
 }
 @media screen and (min-width: 992px) {
-  .title-container i {
+  .title-container__icon {
     margin-right: 0;
   }
+}
+.title-container__icon i[class*=regular] {
+  position: relative;
+}
+.title-container__icon i[class*=solid] {
+  color: transparent;
+  position: absolute;
+  opacity: 0;
+  transition: all 800ms linear;
+  clip-path: inset(100% 0% 0% 0%);
+}
+.title-container__icon:hover i[class*=solid] {
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  opacity: 1;
+  clip-path: inset(0% 0% 0% 0%);
+}
+.title-container__icon:hover i[class*=regular] {
+  opacity: 0;
 }
 
 .menucard {

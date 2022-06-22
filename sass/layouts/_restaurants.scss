@@ -81,16 +81,18 @@
             position: relative;
         }
         & i[class*="solid"]{
+            color: transparent;
             position: absolute;
             opacity: 0;
-            // transition: opacity 2s ease-in-out;
+            transition: all 800ms linear;
+            clip-path: inset(100% 0% 0% 0%);
         }
         &:hover i[class*="solid"]{
-            color: transparent;
             background-clip: text;
             -webkit-background-clip: text;
             background-image: linear-gradient(to bottom right, $color-secondary, $color-primary);
             opacity: 1;
+            clip-path: inset(0% 0% 0% 0%);
         }
         &:hover i[class*="regular"]{
             opacity: 0;
