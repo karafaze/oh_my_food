@@ -67,6 +67,33 @@
             font-weight: 300;
         }
     }
+    &__icon{
+        @include central-row-content;
+        font-size: 2rem;
+        & i[class*="regular"]{
+            position: relative;
+            transition: opacity 600ms cubic-bezier(.6,0,.5,1);
+        }
+        & i[class*="solid"]{
+            color: transparent;
+            position: absolute;
+            opacity: 0;
+            transform: scale(.84, .81);
+            transition: opacity 600ms cubic-bezier(.6,0,.5,1), clip-path 500ms linear, transform 500ms cubic-bezier(1,0,.5,1);
+            clip-path: inset(100% 0% 0% 0%);
+        }
+        &:hover i[class*="solid"]{
+            background-clip: text;
+            -webkit-background-clip: text;
+            background-image: linear-gradient(to bottom right, $color-secondary, $color-primary);
+            opacity: 1;
+            transform: scale(1);
+            clip-path: inset(0% 0% 0% 0%);
+        }
+        &:hover i[class*="regular"]{
+            opacity: 0;
+        }
+    }
     // &__icon{
     //     font-size: 2rem;
     //     @include central-row-content;

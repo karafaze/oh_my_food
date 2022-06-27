@@ -1,0 +1,12 @@
+.loader-container{
+    @include central-row-content;
+}
+.loader{
+    position: fixed;
+    z-index: 100;
+    background-color: red;
+    width: 32vw;
+    height: 25vh;
+    border-radius: 50%;  
+    transform: scale3d(10rem, 30rem, 50rem);
+}
