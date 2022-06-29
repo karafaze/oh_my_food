@@ -89,6 +89,17 @@ h3 {
     opacity: 1;
   }
 }
+@keyframes load {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 header {
   display: flex;
   flex-direction: column;
@@ -689,13 +700,17 @@ footer h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
   background-color: rgba(211, 211, 211, 0.343);
+  z-index: 150;
+  opacity: 0;
+  animation: load 1200ms;
 }
 
 .loader {
-  z-index: 100;
-  position: fixed;
-  top: 5rem;
   width: 150px;
   height: 150px;
   border: 20px solid #FF79DA;

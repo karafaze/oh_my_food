@@ -1,11 +1,15 @@
 .loader-container{
     @include central-row-content;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
     background-color: rgba(211, 211, 211, 0.343);
+    z-index: 150;
+    opacity: 0;
+    animation: load 1200ms;
 }
 .loader{
-    z-index: 100;
-    position: fixed;
-    top: 5rem;
     width: 150px;
     height: 150px;
     border: 20px solid $color-secondary;
@@ -14,3 +18,4 @@
     animation: spin 600ms linear 2;
     opacity: 0;
 }
+
