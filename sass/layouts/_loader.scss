@@ -5,9 +5,9 @@
     width: 100%;
     left: 0;
     background-color: rgba(211, 211, 211, 0.343);
-    z-index: 150;
+    z-index: -1000;
     opacity: 0;
-    animation: load 1200ms;
+    animation: load 1200ms ;
 }
 .loader{
     width: 150px;

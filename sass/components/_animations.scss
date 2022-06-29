@@ -25,9 +25,11 @@
         opacity: 1;
     }
     99%{
+        z-index: 1000;
         opacity: 1;
     }
     100%{
+        z-index: -1000;
         opacity: 0;
     }
 };

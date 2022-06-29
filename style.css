@@ -94,9 +94,11 @@ h3 {
     opacity: 1;
   }
   99% {
+    z-index: 1000;
     opacity: 1;
   }
   100% {
+    z-index: -1000;
     opacity: 0;
   }
 }
@@ -705,7 +707,7 @@ footer h3 {
   width: 100%;
   left: 0;
   background-color: rgba(211, 211, 211, 0.343);
-  z-index: 150;
+  z-index: -1000;
   opacity: 0;
   animation: load 1200ms;
 }
